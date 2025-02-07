@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://mkhairulhamid.github.io/weather-app/",
+  "homepage": "https://mkhairulhamid.github.io/weatherapp/",
   "dependencies": {
     "@radix-ui/react-select": "^2.1.6",
     "@tailwindcss/postcss": "^4.0.4",
