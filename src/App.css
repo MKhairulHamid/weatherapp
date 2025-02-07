@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #6366f1;
+  --background-gradient-start: rgba(59, 130, 246, 0.1);
+  --background-gradient-end: rgba(99, 102, 241, 0.1);
+  --text-color-primary: #1f2937;
+  --text-color-secondary: #4b5563;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color-primary);
+}
+
+.weather-app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.weather-app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg, 
+    var(--background-gradient-start), 
+    var(--background-gradient-end)
+  );
+  background-size: 400% 400%;
+  animation: gradient-flow 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.weather-app-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.weather-app-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.header-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.app-tagline {
+  font-size: 1rem;
+  color: var(--text-color-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.weather-app-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.location-selector {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.weather-display {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.weather-app-footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-color-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .weather-app-content {
+    padding: 1rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+}
