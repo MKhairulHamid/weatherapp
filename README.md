@@ -1,6 +1,7 @@
 # Weather App Frontend
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/37fc706a-f59a-4f63-8fe9-aed25e6b7f36)
+
 
 
 Welcome to the Weather App frontend application! This modern web application is built using React and Vite, providing an intuitive interface for accessing weather information. You can access the live application at [https://mkhairulhamid.github.io/weatherapp/](https://mkhairulhamid.github.io/weatherapp/).
